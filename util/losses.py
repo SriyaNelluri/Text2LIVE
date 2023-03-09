@@ -148,9 +148,9 @@ class LossG(torch.nn.Module):
         loss = 0.0
         for input, output in zip(inputs, outputs):
             with torch.no_grad():
-                target_self_sim = self.clip_extractor.get_self_sim(input.unsqueeze(0))
-            current_self_sim = self.clip_extractor.get_self_sim(output.unsqueeze(0))
-            loss = loss + torch.nn.MSELoss()(current_self_sim, target_self_sim)
+                target_self_sim = self.clip_extractor.get_image_embedding(input.unsqueeze(0))
+            current_self_sim = self.clip_extractor.get_image_embedding(output.unsqueeze(0))
+            loss = loss + torch.nn.L1Loss()(current_self_sim, target_self_sim)
         loss = loss / len(outputs)
         return loss
 
