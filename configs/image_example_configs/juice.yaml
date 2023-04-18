@@ -1,1 +1,9 @@
+image_path: "./data/images/18-juice.jpg" # path to the input image
+
+screen_text: "man drinking Grape Juice" # texts, describing the edit layer
+comp_text: "man drinking Grape Juice" # texts, describing the full edited image
+src_text: "a bottle of yellow juice and a man" # texts, describing the input image
+
+bootstrap_text: "bottle of Juice" # text, describing the region of interest in the input image
+bootstrap_epoch: 1000 # number of epochs for bootstrapping (it is annealed during training)
 
