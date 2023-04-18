@@ -1,1 +1,8 @@
+image_path: "./data/images/4-apples.jpg" # path to the input image
 
+screen_text: "Green Apples" # texts, describing the edit layer
+comp_text: "Green Apples" # texts, describing the full edited image
+src_text: "Red Apples" # texts, describing the input image
+
+bootstrap_text: "Apples" # text, describing the region of interest in the input image
+bootstrap_epoch: 1000 # number of epochs for bootstrapping (it is annealed during training)
