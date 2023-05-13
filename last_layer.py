@@ -17,7 +17,8 @@ class Last_Layer(torch.nn.Module):
          
   def func(self,outputs):
     model=nn.Sequential(
-            nn.ReLU()
+            nn.ReLU(),
+      
     )
     
       
